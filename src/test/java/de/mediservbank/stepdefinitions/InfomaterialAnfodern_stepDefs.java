@@ -21,7 +21,6 @@ public class InfomaterialAnfodern_stepDefs {
     @Then("the user should see the {string} tab")
     public void the_user_should_see_the_tab(String tabName) {
         BrowserUtils.waitForClickablility(infoAnfodern.tabsWebElement(tabName), 5);
-        BrowserUtils.waitFor(10);
         Assert.assertTrue("the tab should be visible",infoAnfodern.tabsWebElement(tabName).isDisplayed());
     }
 
