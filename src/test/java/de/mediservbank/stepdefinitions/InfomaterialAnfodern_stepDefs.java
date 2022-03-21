@@ -20,6 +20,7 @@ public class InfomaterialAnfodern_stepDefs {
 
     @Then("the user should see the {string} tab")
     public void the_user_should_see_the_tab(String tabName) {
+        BrowserUtils.waitForClickablility(infoAnfodern.tabsWebElement(tabName), 5);
         Assert.assertTrue("the tab should be visible",infoAnfodern.tabsWebElement(tabName).isDisplayed());
     }
 
@@ -74,7 +75,6 @@ public class InfomaterialAnfodern_stepDefs {
     @And("the user should able to select {string} option from Aufmerksam")
     public void theUserShouldAbleToSelectOptionFromAufmerksam(String ddownOption) {
         BrowserUtils.selectDropdownOptionsByValue(infoAnfodern.aufmerksamDdown, ddownOption);
-        BrowserUtils.waitFor(3);
     }
 
     @Then("the all mandatory inputs should have asterisk signs")
