@@ -30,6 +30,7 @@ public abstract class BasePage {
      * @return
      */
     public WebElement tabsWebElement (String tabName){
+        BrowserUtils.waitFor(2);
          return Driver.get().findElement(By.xpath("(//*[@class='menu']//*[text()='"+tabName+"']//..)[1]"));
     }
 

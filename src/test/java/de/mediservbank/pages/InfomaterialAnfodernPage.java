@@ -78,7 +78,7 @@ public class InfomaterialAnfodernPage extends BasePage {
 
     public void termsAndConditionValidation(List<String> expectedLabels){
         BrowserUtils.scrollToElement(termsCheckbox);
-        BrowserUtils.waitForClickablility(termsCheckbox, 5);
+        BrowserUtils.waitForClickablility(termsCheckbox, 10);
         Assert.assertFalse(termsCheckbox.isSelected());
         BrowserUtils.clickWithJS(termsCheckbox);
         Assert.assertTrue(termsCheckbox.isSelected());

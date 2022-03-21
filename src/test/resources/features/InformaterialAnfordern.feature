@@ -6,7 +6,7 @@ Feature: As a user I have to register anf fill the form
     Given As a user I am on "Infomaterial anfordern" page
 
   @AC-1 @AC-2
-  Scenario: User should see the "Infomaterial anfordern" tab ant title
+  Scenario: User should see the "Infomaterial anfordern" tab and title
     Then the user should see the "Infomaterial anfordern" tab
     And the user should see "Infomaterial anfordern" as title
     And the headline of page should be "Infomaterial anfordern"
